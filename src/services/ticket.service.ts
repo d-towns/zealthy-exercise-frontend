@@ -1,6 +1,5 @@
 import { CreateReplyThread } from "../models/replyThread.model";
 import { CreateTicket, UpdateTicket } from "../models/ticket.model";
-import { getEnvironmentApiUrl } from "../utils/utils";
 import axiosInstance from "./axios";
 
 class TicketService {
@@ -33,7 +32,7 @@ class TicketService {
 
     static async createTicket(ticket: CreateTicket) {
         try {
-            const response = await axiosInstance.post( getEnvironmentApiUrl() + "/tickets/create", ticket);
+            const response = await axiosInstance.post("/tickets/create", ticket);
             return response.data;
         } catch (error) {
             console.error(error);
