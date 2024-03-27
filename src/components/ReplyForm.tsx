@@ -55,7 +55,7 @@ const ReplyForm: React.FC<ReplyFormProps> = ({ ticket , setTicket}: ReplyFormPro
             </select>
             <button
                 type="submit"
-                className="px-4 py-1 ml-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                className="px-4 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
                 onClick={handleUpdateStatus}
             >
                 Update Status

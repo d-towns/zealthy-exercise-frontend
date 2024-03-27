@@ -24,7 +24,7 @@ const TicketPage: React.FC = () => {
     }, []);
 
     return (
-        <div className="container mx-auto p-4 max-w-4xl bg-white rounded-lg shadow-lg">
+        <div className="container bg-gray-300  mt-12 mx-auto p-4 max-w-4xl rounded-lg shadow-lg">
             {ticket?.slug ?
                 <>
                     <TicketInfoCard ticket={ticket} />

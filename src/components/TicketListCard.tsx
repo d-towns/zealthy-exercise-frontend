@@ -10,18 +10,18 @@ const TicketListCard: React.FC<TicketListCardProps> = ({ ticket }: TicketListCar
   const { title, status, description, slug} = ticket
   return (
     <Link to={`/ticket/${slug}`}>
-    <div className="bg-gray-600 m-4 rounded shadow-lg p-4 w-full">
+    <div className="bg-gray-300 m-4 rounded shadow-lg p-4 w-full">
       <div className="flex justify-left gap-5  items-center mb-2">
         <span className={`text-sm font-semibold px-2 py-1 rounded ${status === 'new' ? 'bg-green-500' : 'bg-red-500'
-          } text-white`}>
+          } text-black`}>
           {status}
         </span>
-        <p className="text-lg text-white font-bold">
+        <p className="text-lg text-black font-bold">
           {title}
         </p>
       </div>
       <div className="mb-2">
-        <p className="text-white text-opacity-80">
+        <p className="text-black text-opacity-80">
           {description}
         </p>
       </div>

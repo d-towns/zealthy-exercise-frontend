@@ -27,7 +27,7 @@ const TicketForm: React.FC = () => {
     }
 
     return (
-        <form onSubmit={ (e) => handleSubmit(e)}  className="flex mx-5 rounded-lg flex-col gap-4 p-4 bg-brutalist-gray-light border border-brutalist-metal shadow-lg max-w-5xl mx-auto">
+        <form onSubmit={ (e) => handleSubmit(e)}  className="flex mx-5 rounded-lg flex-col gap-4 p-4 shadow-lg max-w-5xl mx-auto">
         <div>
             <label htmlFor='email' className="block text-white mb-2">Email</label>
             <input id="email" name="email" className="w-full px-3 py-2 bg-white text-gray-800 rounded-lg" value={ticketForm.email} onChange={handleChange} />

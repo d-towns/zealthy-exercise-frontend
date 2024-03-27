@@ -42,13 +42,13 @@ const LoginPage : React.FC = () => {
     }
 
     return (
-        <div className="flex h-screen items-center justify-center bg-brutalist-gray-dark">
-            <div className="bg-brutalist-gray border border-brutalist-metal-dark shadow-xl p-8 max-w-sm w-full rounded-lg">
+        <div className="flex h-screen items-center justify-center">
+            <div className="border shadow-xl p-8 max-w-sm w-full rounded-lg">
                 <h1 className="text-white text-3xl text-center mb-6">Login</h1>
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <div>
                         <label htmlFor="email" className="block text-white mb-2">Email</label>
-                        <input onChange={handleChange} placeholder='Email' name='email' type='email' className="w-full px-3 rounded-lg py-2 bg-white text-black border border-brutalist-metal-light focus:outline-none focus:border-brutalist-red-dark" />
+                        <input onChange={handleChange} placeholder='Email' name='email' type='email' className="w-full px-3 rounded-lg py-2 bg-white text-black border  focus:outline-none " />
                     </div>
                     <div>
                         <label htmlFor="isAdmin" className="block text-white mb-2">

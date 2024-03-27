@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   const {isAdmin, isLoggedIn} = useAuth();
 
   return (
-    <nav className="bg-brutalist-gray-dark p-4">
+    <nav className="bg-gray-300 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to='/'><h1 className="text-2xl">Zealthy Zupport</h1></Link>
         <div>

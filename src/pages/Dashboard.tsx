@@ -15,7 +15,7 @@ const DashboardPage : React.FC = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-800">
+        <div className="flex justify-center items-center min-h-screen">
             <div>
                 {tickets.map((ticket) => (
                     <TicketListCard key={ticket.id} ticket={ticket} />
