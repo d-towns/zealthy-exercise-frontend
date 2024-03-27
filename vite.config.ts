@@ -11,21 +11,7 @@ export default defineConfig({
   port: 8080,
   strictPort: true,
  },
- server: {
-  port: 8080,
-  strictPort: true,
-  host: true,
-  origin: "http://0.0.0.0:8080",
- },
  define: {
     'process.env': process.env
- },
- test: {
-   globals: true,
-   environment: 'jsdom',
-   setupFiles: './src/test/setup.ts',
-   // you might want to disable it, if you don't have tests that rely on CSS
-   // since parsing CSS is slow
-   css: true,
  },
 });
