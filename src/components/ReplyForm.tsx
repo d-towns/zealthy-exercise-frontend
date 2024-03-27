@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TicketService from '../services/ticket.service';
 import useReplyForm from '../hooks/useReplyForm';
 import { TicketSchema } from '../models/ticket.model';

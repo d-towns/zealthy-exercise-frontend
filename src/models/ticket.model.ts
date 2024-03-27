@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ReplyThread, ReplyThreadSchema } from './replyThread.model';
+import { ReplyThreadSchema } from './replyThread.model';
 
 export const TicketSchema = z.object({
     id: z.string(),
