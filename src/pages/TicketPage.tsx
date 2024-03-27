@@ -32,7 +32,7 @@ const TicketPage: React.FC = () => {
                         <ReplyThreadCard key={reply.id} reply={reply} />
                     ))}
                     {isAdmin &&
-                    <ReplyForm ticketId={ticket.id} currentStatus={ticket.status} />
+                    <ReplyForm ticket={ticket} setTicket={setTicket}/>
 }
                 </>
                 :

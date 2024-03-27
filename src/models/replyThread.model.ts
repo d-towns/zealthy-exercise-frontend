@@ -13,8 +13,7 @@ export const ReplyThreadSchema = z.object({
 
 export const CreateReplyThreadSchema = z.object({
     ticketId: z.string(),
-    message: z.string(),
-    newStatus: z.string().nullable(),
+    message: z.string()
 });
 
 
