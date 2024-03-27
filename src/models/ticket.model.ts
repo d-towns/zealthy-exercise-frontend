@@ -10,10 +10,10 @@ export const TicketSchema = z.object({
     status: z.enum(["new", "in-progress", "resolved"]),
     createdAt: z.string(),
     updatedAt: z.string(),
-    Replies: z.array(ReplyThreadSchema),
+    replies: z.array(ReplyThreadSchema),
 });
 
-export const CreateTicketSchema = TicketSchema.omit({ id: true, createdAt: true, updatedAt: true, Replies: true, slug: true});
+export const CreateTicketSchema = TicketSchema.omit({ id: true, createdAt: true, updatedAt: true, replies: true, slug: true});
 // update scheme should be able to have any of the fields
 export const UpdateTicketSchema = TicketSchema.partial()
 

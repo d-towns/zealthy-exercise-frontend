@@ -25,7 +25,7 @@ const ReplyForm: React.FC<ReplyFormProps> = ({ ticket , setTicket}: ReplyFormPro
             CreateReplyThreadSchema.parse(replyForm);
             const resposne = await TicketService.replyToTicket(ticket.id, { ...replyForm});
             console.log(resposne);
-            setTicket({...ticket, Replies: [...ticket.Replies, resposne]});
+            setTicket({...ticket, replies: [...ticket.replies, resposne]});
         } catch (error) {
             if (error instanceof z.ZodError) {
                 setError(error.errors[0].message);

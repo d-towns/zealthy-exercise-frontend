@@ -28,7 +28,7 @@ const TicketPage: React.FC = () => {
             {ticket?.slug ?
                 <>
                     <TicketInfoCard ticket={ticket} />
-                    {ticket.Replies?.map(reply => (
+                    {ticket.replies?.map(reply => (
                         <ReplyThreadCard key={reply.id} reply={reply} />
                     ))}
                     {isAdmin &&
