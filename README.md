@@ -1,5 +1,9 @@
 # Zealthy exercise
 
+## Installation
+- Change `.env.sample` to `.env`
+- change `REACT_APP_API_URL` to the localhost port you are serving the backend at
+
 ## Run via Docker
 Run `docker-compose up --build` to start the app
 
