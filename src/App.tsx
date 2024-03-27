@@ -12,6 +12,7 @@ import CreateTicketPage from './pages/CreateTicketPage';
 import TicketPage from './pages/TicketPage';
 import LoginPage from './pages/Login';
 import { AuthProvider } from './context/AuthContext';
+import ErrorBoundary from './components/ErrorBoundary';
 
 const Root = () => (
   <React.Fragment>
@@ -34,15 +35,17 @@ const routes = (
 );
 
 const routeArray = createRoutesFromElements(routes);
-const router = createBrowserRouter(routeArray);
+
 
 function App() {
-
+  const router = createBrowserRouter(routeArray);
   return (
     <>
-      <AuthProvider>
-        <RouterProvider router={router} />
-      </AuthProvider>
+      <ErrorBoundary fallback={'There was an error, please check the console'}>
+        <AuthProvider>
+          <RouterProvider router={router} />
+        </AuthProvider>
+      </ErrorBoundary>
     </>
   );
 }
