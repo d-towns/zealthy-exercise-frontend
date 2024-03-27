@@ -6,10 +6,12 @@ import ReplyForm from '../components/ReplyForm';
 import ReplyThreadCard from '../components/ReplyThread';
 import TicketInfoCard from '../components/TicketInfoCard';
 import { z } from 'zod';
+import { useAuth } from '../context/AuthContext';
 
 const TicketPage: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
     const [ticket, setTicket] = useState<z.infer<typeof TicketSchema>>({} as z.infer<typeof TicketSchema>);
+    const {isAdmin} = useAuth();
 
     React.useEffect(() => {
         const fetchTicket = async () => {
@@ -29,7 +31,9 @@ const TicketPage: React.FC = () => {
                     {ticket.Replies?.map(reply => (
                         <ReplyThreadCard key={reply.id} reply={reply} />
                     ))}
-                    <ReplyForm ticketId={ticket.id} />
+                    {isAdmin &&
+                    <ReplyForm ticketId={ticket.id} currentStatus={ticket.status} />
+}
                 </>
                 :
                 <p>Loading...</p>
