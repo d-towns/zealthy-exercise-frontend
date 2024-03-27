@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { set, z } from 'zod';
-
-// explain why we use useRef here
+import { z } from 'zod';
 
 const LoginFormSchema = z.object({
     email: z.string().email(),
