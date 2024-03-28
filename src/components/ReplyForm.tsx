@@ -21,10 +21,8 @@ const ReplyForm: React.FC<ReplyFormProps> = ({ ticket , setTicket}: ReplyFormPro
     const handleReplySubmit = async (event: React.FormEvent) => {
         try {
             event.preventDefault();
-            console.log(replyForm)
             CreateReplyThreadSchema.parse(replyForm);
             const resposne = await TicketService.replyToTicket(ticket.id, { ...replyForm});
-            console.log(resposne);
             setTicket({...ticket, replies: [...ticket.replies, resposne]});
         } catch (error) {
             if (error instanceof z.ZodError) {

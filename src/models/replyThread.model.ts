@@ -4,7 +4,7 @@ export const ReplyThreadSchema = z.object({
     id: z.string(),
     ticketId: z.string(),
     replyParentId: z.string().nullable(),
-    userEmail: z.string(),
+    userEmail: z.string().optional(),
     message: z.string(),
     isInternal: z.boolean(),
     createdAt: z.string(),
@@ -13,7 +13,8 @@ export const ReplyThreadSchema = z.object({
 
 export const CreateReplyThreadSchema = z.object({
     ticketId: z.string(),
-    message: z.string()
+    message: z.string(),
+    userEmail: z.string().optional(),
 });
 
 

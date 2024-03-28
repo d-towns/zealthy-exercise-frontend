@@ -5,7 +5,7 @@ const CreateTicketPage: React.FC = () => {
 
     return (
         <>
-            <h1 className="text-2xl text-center my-5 font-semibold">Create Support Ticket</h1>
+            <h1 className="text-2xl text-center text-white my-5 font-semibold">Create Support Ticket</h1>
             <TicketForm />
         </>
     )

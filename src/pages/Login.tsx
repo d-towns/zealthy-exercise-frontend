@@ -19,7 +19,6 @@ const LoginPage : React.FC = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            console.log(loginForm);
             LoginFormSchema.parse(loginForm);
             setEmail(loginForm.email);
             setIsAdmin(loginForm.isAdmin || false);
