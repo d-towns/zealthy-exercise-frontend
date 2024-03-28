@@ -11,7 +11,7 @@ import { useAuth } from '../context/AuthContext';
 const TicketPage: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
     const [ticket, setTicket] = useState<z.infer<typeof TicketSchema>>({} as z.infer<typeof TicketSchema>);
-    const {isAdmin} = useAuth();
+    const { isAdmin } = useAuth();
 
     React.useEffect(() => {
         const fetchTicket = async () => {
@@ -31,9 +31,12 @@ const TicketPage: React.FC = () => {
                     {ticket.replies?.map(reply => (
                         <ReplyThreadCard key={reply.id} reply={reply} />
                     ))}
-                    {isAdmin &&
-                    <ReplyForm ticket={ticket} setTicket={setTicket}/>
-}
+                    {isAdmin ?
+                        <ReplyForm ticket={ticket} setTicket={setTicket} /> :
+                        <div className="p-4 m-4">
+                            <p className="text-center text-2xl ">Only Admins can reply to tickets. Please log in again as admin</p>
+                        </div>
+                    }
                 </>
                 :
                 <p>Loading...</p>
